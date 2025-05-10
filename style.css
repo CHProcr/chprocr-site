@@ -1,20 +1,31 @@
+/* Reseteo de márgenes y rellenos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo general del cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Estilo del header */
 header {
     background-color: #003366;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 header nav ul {
@@ -23,24 +34,82 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+    color: #ff8c00;
+}
+
+/* Estilo de las secciones */
 section {
-    padding: 20px;
-    margin: 10px 0;
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
+/* Títulos de las secciones */
+section h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las listas de servicios */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+/* Estilo del footer */
 footer {
-    text-align: center;
     background-color: #003366;
     color: white;
-    padding: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo de los enlaces */
+a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff8c00;
+}
+
+/* Responsive: ajustar el tamaño de texto en pantallas más pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
 }
